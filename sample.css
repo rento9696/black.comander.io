@@ -1,23 +1,3 @@
-.bg_test-text {
-    border:  solid 1px;                             /* 枠線指定 */
-    display:  inline-block;                         /* インラインブロックにする */
-    padding: 10px 20px;                             /* 余白指定 */
-    background-color: rgba(255, 255, 255, 0.7);     /* 背景色指定 */
-}
-.bg_test {
-    text-align:  center;    /* 文字中央寄せ */
-    padding:  150px;        /* 余白指定 */
-    border: solid 2px;      /* 枠線指定 */
-}
-
-セレクタ {
-    background-image: url(sunnn11jan15.jpg);
-}
-
-.bg_test {
-    background-image: url(sunnn11jan15.jpg);    /* 背景画像指定 */
-}
-
-セレクタ {
-    background-size: auto;
+body {
+  background: url(sunnn11jan15.jpg) center center / cover no-repeat fixed;
 }
