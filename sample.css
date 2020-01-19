@@ -17,3 +17,7 @@
 .bg_test {
     background-image: url(sunnn11jan15.jpg);    /* 背景画像指定 */
 }
+
+セレクタ {
+    background-size: auto;
+}
