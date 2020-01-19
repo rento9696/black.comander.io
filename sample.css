@@ -1,3 +1,8 @@
-body {
-  background: url(sunnn11jan15.jpg) center center / cover no-repeat fixed;
+
+html { 
+  background: url(sunnn11jan15.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
