@@ -1,15 +1,498 @@
-<!doctype html>
-<html>
-<body>
- <section class="hero is-fullheight" style="background: url(sunnn11jan15.jpg)">
- </section>
-</body>
-</html>
-<html>
-<head>
-<title>サンプル</title>
-</head>
-<body  background="sunnn11jan15.jpg">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>セックスシュミレーター</title>
+	<link rel="stylesheet" type="text/css" href="https://freesexgame.com/lpc/resources/play-b/css/styles.css" />
+	<link rel="manifest" href="https://freesexgame.com/lpc/resources/play-b/manifest.json" />
+	<style type="text/css">
+		.mobile-background{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+			height: 0;
+		}
 
-</body>
+		@media screen and (max-width: 812px){
+			body{
+				background: none;
+			}
+
+			body.bg-1 .mobile-background.bg-1,
+			body.bg-2 .mobile-background.bg-2,
+			body.bg-3 .mobile-background.bg-3,
+			body.bg-4 .mobile-background.bg-4,
+			body.bg-5 .mobile-background.bg-5,
+			body.bg-6 .mobile-background.bg-6,
+			body.bg-7 .mobile-background.bg-7{
+				height: 100vh;
+				width: 100vw;
+				opacity: 1;
+			}
+
+		}
+
+		.mobile-background.bg-1{
+			background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/p1.jpg);
+		}
+
+		.mobile-background.bg-2{
+			background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/p2.jpg);
+		}
+
+		.mobile-background.bg-3{
+			background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/p3.jpg);
+		}
+
+		.mobile-background.bg-4{
+			background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/p4.jpg);
+		}
+
+		.mobile-background.bg-5{
+			background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/p5.jpg);
+		}
+
+		.mobile-background.bg-6{
+			background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/p6.jpg);
+		}
+
+		.mobile-background.bg-7{
+			background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/p7.jpg);
+		}
+
+		@media screen and (max-width: 812px) and (orientation: landscape){
+			body.bg-1 .mobile-background.bg-1,
+			body.bg-2 .mobile-background.bg-2,
+			body.bg-3 .mobile-background.bg-3,
+			body.bg-4 .mobile-background.bg-4,
+			body.bg-5 .mobile-background.bg-5,
+			body.bg-6 .mobile-background.bg-6,
+			body.bg-7 .mobile-background.bg-7{
+				height: 100vh;
+				width: 100vw;
+				opacity: 1;
+			}
+
+			.mobile-background.bg-1{
+				background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/h1.jpg);
+			}
+
+			.mobile-background.bg-2{
+				background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/h2.jpg);
+			}
+
+			.mobile-background.bg-3{
+				background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/h3.jpg);
+			}
+
+			.mobile-background.bg-4{
+				background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/h4.jpg);
+			}
+
+			.mobile-background.bg-5{
+				background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/h5.jpg);
+			}
+
+			.mobile-background.bg-6{
+				background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/h6.jpg);
+			}
+
+			.mobile-background.bg-7{
+				background-image: url(//drb1s82p88cr6.cloudfront.net/lp/resources/play-b/images/h7.jpg);
+			}
+		}
+	</style>
+	</head>
+	<body class="uninitialized app play-b">
+		<script>
+			(function(){ //Store URL variables in cookie
+				function getParameterByName(name) {
+				    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				    var regex = new RegExp("[\\?&amp;]" + name + "=([^&amp;#]*)"),
+					results = regex.exec(location.search);
+				    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+				}
+
+				function setCookie(cname, cvalue, exdays) {
+				  var d = new Date();
+				  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				  var expires = "expires="+ d.toUTCString();
+				  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+				}
+
+				var whitelist = [
+					'autocamp',
+					'cmp',
+					'h'
+				];
+
+				var index = 0,
+				    length = whitelist.length,
+				    value;
+
+				for( ; index < length; index++ ){
+					value = getParameterByName( whitelist[ index ] );
+
+					if( value ){
+						setCookie( whitelist[ index ], value, 90 );
+					}
+				}
+			}());
+		</script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-146074570-1');
+		</script>
+		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+		<script>
+		var OneSignal = window.OneSignal || [];
+		window.cfSPRemoveOverlay;
+
+		OneSignal.push(function() {
+		  OneSignal.init({
+			appId: "729aee06-0c2d-493d-a4c2-ee7ec1bd1b39",
+			autoRegister: true,
+			notifyButton: {
+			  enable: false,
+			},
+			welcomeNotification: {
+			  disable: true
+			},
+		  });
+		});
+		</script>
+		<script src="https://freesexgame.com/lpc/resources/shared/js/base64.js"></script>
+		<script id="app">
+			var _app = _app || { cmd : [] };
+
+			_app.config = {
+				path_prefix : '/lpc',
+				paths : ["\/play-b\/","\/bbc\/survey\/","\/red\/survey\/","\/feet\/survey\/","\/video\/survey\/","\/xxx-games\/","\/bdsm-sim\/","\/sex-sim\/"], //Available paths
+				title : 'Guaranteed 100% Satisfaction Free Sex Game - FreeSexGame.com',
+				cdn : { video : '//drb1s82p88cr6.cloudfront.net/lp/videos' }
+			};
+
+			var _app_script;
+			(function(){
+				_app_script = document.createElement( 'script' );
+				_app_script.type = 'text/javascript';
+				_app_script.async = true;
+				_app_script.src = 'https://freesexgame.com/lpc/resources/shared/js/app.min.js?v=27';
+				_app_script.id = 'app';
+				var el = document.body.getElementsByTagName( 'script' )[0];
+				el.parentNode.insertBefore( _app_script, el );
+			})();
+		</script>
+		<div id="app-container">
+	<header class="header">
+		<h1 class="logo"><img src="//drb1s82p88cr6.cloudfront.net/lp/resources/play/images/logo.png" alt="セックスシュミレーター" width="445" height="110" /></h1>
+		<aside class="header__right">
+			<a id="volume" data-audio="true" href="javascript:void(0);" class="btn btn--sound"><img src="//drb1s82p88cr6.cloudfront.net/lp/resources/play/images/btn-sound.png" alt="音声切り替え" width="71" height="69" /></a>
+		</aside>
+	</header>
+	<main class="main">
+		<section class="step step-1 step-blur-bg step-active" data-audio="warning" data-step="step-1">
+			<div class="content-padding">
+				<h2 class="title title--ab title--red">警告</h2>
+
+				<div class="txt txt--ab">タクマッチーズペニスは、極度であり、視聴者によっては、衝撃的すぎるかもしれません</div>
+
+				<div class="buttons">
+					<a href="https://rento9696.github.io/30min.io/" data-app-event-next class="btn btn--step btn--step-single"><span class="btn__label">続ける</span> <i class="icon icon--right"></i></a>
+				</div>
+			</div>
+		</section>
+		<section class="step step-2" data-audio="choose-your-gender" data-step="step-2">
+			<div class="content-padding">
+				<h2 class="title title--av">あなたの <strong>性別</strong><br><em>を選択してください</em></h2>
+				<div class="buttons">
+					<a href="#step-3" data-app-event-next class="btn btn--step"><i class="icon icon--left"></i> <span class="btn__label">男性</span></a>
+					<a href="#step-3" data-app-event-next class="btn btn--step"><span class="btn__label">女性</span> <i class="icon icon--right"></i></a>
+				</div>
+			</div>
+		</section>
+		<section class="step step-3" data-audio="choose-partners-gender" data-step="step-3">
+			<div class="content-padding">
+				<h2 class="title title--av"><span style="font-size:85%">あなたの <strong>パートナーの性別</strong>を選択してください</span></h2>
+				<div class="buttons">
+					<a href="#step-4" data-app-event-next class="btn btn--step"><span class="btn__label">男性</span> <i class="icon icon--right"></i></a>
+					<a href="#step-4" data-app-event-next class="btn btn--step"><span class="btn__label">女性</span> <i class="icon icon--right"></i></a>
+					<a href="#step-4" data-app-event-next class="btn btn--step"><span class="btn__label"><span style="font-size:40%">トランスジェンダー</span></span> <i class="icon icon--right"></i></a>
+				</div>
+			</div>
+		</section>
+		<section class="step step-4" data-audio="choose-partners-age" data-step="step-4">
+			<div class="content-padding">
+				<h2 class="title title--av"><span style="font-size:85%">あなたの希望する <strong>パートナーの年齢</strong>を選択してください</span></h2>
+				<div class="buttons">
+					<a href="#step-5" data-app-event-next class="btn btn--step"><span class="btn__label"><span style="font-size:40%">ティーンエージャー</span></span> <i class="icon icon--right"></i></a>
+					<a href="#step-5" data-app-event-next class="btn btn--step"><span class="btn__label">熟女</span> <i class="icon icon--right"></i></a>
+					<a href="#step-5" data-app-event-next class="btn btn--step"><span class="btn__label">年配者</span> <i class="icon icon--right"></i></a>
+				</div>
+			</div>
+		</section>
+		<section class="step step-5" data-audio="confirm-age" data-step="step-5">
+			<div class="content-padding">
+				<h2 class="title title--av"><br><strong>あなたの年齢</strong>を確認</h2>
+				<div class="buttons">
+					<a href="#step-6" data-app-event-next class="btn btn--step btn--step-double">
+						<span class="btn__r btn__r--sm">私は18歳以上です</span>
+						<strong class="btn__r btn__r--lg"><span class="btn__label">始める</span> <i class="icon icon--right"></i></strong>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="step step-6" data-audio="extreme-simulator" data-step="step-6">
+			<div class="content-padding">
+				<h2 class="title title--v title--yellow">注意</h2>
+				<div class="txt txt--sm">当社の受賞作品であるアダルトセックスシミュレータを始める前に、あなたにいくつかの質問をします。</div>
+				<div class="txt txt--v">このシュミレーターは極めて中毒性が高く、あなたは何度も快感を感じるでしょう。あなたが早漏れするタイプである場合、このシュミレーターのプレイを推奨しません。 <em class="txt__highlight">続けますか？</em></div>
+				<div class="buttons">
+					<a href="#step-7" data-app-event-next class="btn btn--step btn--primary"><span class="btn__label">はい</span> <i class="icon icon--right"></i></a>
+					<a href="#step-7" data-app-event-next class="btn btn--step"><span class="btn__label">いいえ</span> <i class="icon icon--right"></i></a>
+				</div>
+				<nav class="step__nav"><strong>1</strong>  of  <strong>3</strong></nav>
+			</div>
+		</section>
+		<section class="step step-7" data-audio="real-players" data-step="step-7">
+			<div class="content-padding">
+				<h2 class="title title--v title--yellow">注意</h2>
+				<div class="txt txt--sm">当社の受賞作品であるアダルトセックスシミュレータを始める前に、あなたにいくつかの質問をします。</div>
+				<div class="txt txt--v">一度承認されると、あなたに絶頂を余儀なくする世界中のリアルなプレイヤーとのプレイに招待されます。 <em class="txt__highlight">準備はいいですか？</em></div>
+				<div class="buttons">
+					<a href="#step-8" data-app-event-next class="btn btn--step btn--primary"><span class="btn__label">はい</span> <i class="icon icon--right"></i></a>
+					<a href="#step-8" data-app-event-next class="btn btn--step"><span class="btn__label">いいえ</span> <i class="icon icon--right"></i></a>
+				</div>
+				<nav class="step__nav"><strong>2</strong>  of  <strong>3</strong></nav>
+			</div>
+		</section>
+		<section class="step step-8" data-audio="game-mode" data-step="step-8">
+			<div class="content-padding">
+				<h2 class="title title--v title--yellow">注意</h2>
+				<div class="txt txt--sm">当社の受賞作品であるアダルトセックスシミュレータを始める前に、あなたにいくつかの質問をします。</div>
+				<div class="txt txt--lg">あなたのゲームモードを選択してください</div>
+				<div class="buttons buttons--lg">
+					<a href="#step-9" data-app-event-next class="btn btn--step btn--lg"><span class="btn__label"><span style="font-size:70%">マルチプレイヤー</span></span> <i class="icon icon--right"></i></a>
+					<a href="#step-9" data-app-event-next class="btn btn--step btn--lg"><span class="btn__label"><span style="font-size:70%">シングルプレイヤー</span></span> <i class="icon icon--right"></i></a>
+				</div>
+				<nav class="step__nav"><strong>3</strong>  of  <strong>3</strong></nav>
+			</div>
+		</section>
+		<section class="step step-9 step-auto" data-timeout="4500" data-step="step-9">
+			<div class="content-padding">
+				<h2 class="title title--v title--yellow">おめでとうございます</h2>
+				<div class="txt txt--v">当社のシミュレータは、<em class="txt__highlight">Chrome</em> の <em class="txt__highlight">PC</em>と互換性があります。ダウンロードの必要はありません。</div>
+				<nav class="step__loading"><span class="step__loading__progress"></span></nav>
+			</div>
+		</section>
+		<section class="step step-10 step-auto" data-timeout="13000" data-audio="location-日本" data-audio-default="location-your-country" data-step="step-10">
+			<div class="content-padding">
+				<h2 class="title title--v title--yellow">おめでとうございます</h2>
+				<div class="txt txt--v">
+					<p>当社は2000人のプレイヤーを <em class="txt__highlight">日本</em> から検出しました。このシュミレーターに参加するために、<em class="txt__highlight">日本</em> で年齢確認をする必要があります。</p>
+					<p>請求はありません。</p>
+				</div>
+				<nav class="step__loading"><span class="step__loading__progress"></span></nav>
+			</div>
+		</section>
+		<section class="step step-final step-11" data-step="step-11">
+			<div class="content-padding">
+				<h2 class="title title--v title--yellow">今すぐプレイ</h2>
+				<div class="form-wraper">
+					<iframe src="https://www.lander-secure.com/ep.php/sexsim1:67835/66842:sim_ntvb.55e2d960bc0d83036131803" width="330" height="400" frameborder="0"></iframe>
+				</div>
+			</div>
+			<script>
+				//Survey options numbers corresponding to survey answers
+				var quiz_option_ids = [ 47, 48, 104, 117, 105, 106, 121, 108, 128, 112, 107, 120, 113, 59, 113, 126, 125, 64, 126, 131, 118, 68, 134, 131, 121, 146, 73 ],
+					quiz_answer_ids = [ [ 108, 112, 101, 100, 120, 110, 117, 117 ], [ 104, 98, 117, 107 ], [ 104, 112, 117, 119, 114, 102, 115, 108 ] ],
+					quiz_answers = [ '', '', '', '' ],
+					quiz_time_limit = Math.floor( Math.random() * 100 );
+			</script>
+		</section>
+	</main>
+
+
+	<footer class="footer">
+		<div class="footer__left">
+			<figure class="parental"><img src="//drb1s82p88cr6.cloudfront.net/lp/resources/play/images/parental.png" alt="Parental" width="277" height="220" /></figure>
+		</div>
+	</footer>
+
+	<aside id="particles"></aside>
+
+	<video id="videoElement" class="videoElement" autoplay loop muted playsinline>
+		<source id="videoSource" src="">
+	</video>
+
+	<div class="mobile-background bg-1"></div>
+	<div class="mobile-background bg-2"></div>
+	<div class="mobile-background bg-3"></div>
+	<div class="mobile-background bg-4"></div>
+	<div class="mobile-background bg-5"></div>
+	<div class="mobile-background bg-6"></div>
+	<div class="mobile-background bg-7"></div>
+<script type="text/javascript">
+<!--
+	var lang = 'ja',
+	soundsFiles = [
+    "bg","choose-your-gender","warning","choose-partners-gender","choose-partners-age","confirm-age","extreme-simulator","real-players","porn-sites","game-mode","browser-browser-device","location-your-country","browser-chrome-mac","browser-chrome-pc","location-new-york",  ];
+
+	var whitelist = [
+		'ar', 'ast', 'cs', 'da', 'de', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'nb', 'nl', 'no', 'pl', 'pt', 'ro', 'ru', 'sv', 'tr', 'zh-hans'
+	];
+
+	if( whitelist.indexOf( lang ) == -1 ){
+	    lang = 'en';
+	}
+//-->
+</script>
+<script src="https://freesexgame.com/lpc/resources/shared/js/jquery.min.js"></script>
+<script src="https://freesexgame.com/lpc/resources/shared/js/particles.min.js"></script>
+<script src="https://freesexgame.com/lpc/resources/shared/js/ion.sound.min.js"></script>
+<script src="https://freesexgame.com/lpc/resources/play-b/js/fn.min.js?v=2003004010"></script>
+<script>
+	$( document ).ready( function(){
+		$( 'body' ).data( 'play-bg-count', 0 );
+		$( 'body' ).addClass( 'bg-1' );
+
+		var count = $( 'body' ).data( 'play-bg-count' );
+
+		setInterval( function(){
+			if( $( '.mobile-background' ).length ){
+				count++;
+
+				var step = ( 7 - ( count % 7 ) );
+
+				$( 'body' ).attr( 'class', function( i, c ){
+					return( c.replace( /bg-[0-9]+/ig, '' ) );
+				});
+				$( 'body' ).addClass( 'bg-' + step );
+			}
+		}, 5000 );
+	} );
+
+
+	var _on_init = function(){
+		if( _app.get_step() == 'step-9' || _app.get_step() == 'step-10' ){
+			_app.goto_step( 'step-11' );
+		}
+
+	};
+
+	_app.cmd.push( { on_init : _on_init } );
+
+	var _on_change_path = function(){
+		$( 'body' ).removeClass( 'bg-music-started steps-done bg-1 bg-2 bg-3 bg-4 bg-5 bg-6 bg-7' );
+
+		//Turn off any sound
+		if( typeof ion != 'undefined' && typeof ion[ 'sound' ] != 'undefined' && typeof ion[ 'sound' ][ 'stop' ] != 'undefined' ){
+			setTimeout( function() { try { ion.sound.stop(); } catch ( err ){ /* .. */ } }, 0 );
+		}
+	};
+
+	_app.cmd.push( { on_change_path : _on_change_path } );
+</script>
+<script>_app.cmd.push( 'init' );</script>
+		</div>
+		<div id="loader">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="infinity" data-name="infinity">
+<path fill="none" stroke="#e90c59" stroke-width="8" stroke-dasharray="42.76482137044271 42.76482137044271" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round" style="transform:scale(0.8);transform-origin:50px 50px">
+<animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="1s" keyTimes="0;1" values="0;256.58892822265625"></animate>
+</path><!-- [ldio] generated by https://loading.io/ --></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="bean-eater" data-name="bean-eater">
+<g>
+  <circle cx="79.7952" cy="50" r="4" fill="#e15b64">
+    <animate attributeName="cx" repeatCount="indefinite" dur="1s" values="95;35" keyTimes="0;1" begin="-0.67s"></animate>
+    <animate attributeName="fill-opacity" repeatCount="indefinite" dur="1s" values="0;1;1" keyTimes="0;0.2;1" begin="-0.67s"></animate>
+  </circle>
+  <circle cx="40.1952" cy="50" r="4" fill="#e15b64">
+    <animate attributeName="cx" repeatCount="indefinite" dur="1s" values="95;35" keyTimes="0;1" begin="-0.33s"></animate>
+    <animate attributeName="fill-opacity" repeatCount="indefinite" dur="1s" values="0;1;1" keyTimes="0;0.2;1" begin="-0.33s"></animate>
+  </circle>
+  <circle cx="59.9952" cy="50" r="4" fill="#e15b64">
+    <animate attributeName="cx" repeatCount="indefinite" dur="1s" values="95;35" keyTimes="0;1" begin="0s"></animate>
+    <animate attributeName="fill-opacity" repeatCount="indefinite" dur="1s" values="0;1;1" keyTimes="0;0.2;1" begin="0s"></animate>
+  </circle>
+</g><g transform="translate(-15 0)">
+  <path d="M50 50L20 50A30 30 0 0 0 80 50Z" fill="#f8b26a" transform="rotate(90 50 50)"></path>
+  <path d="M50 50L20 50A30 30 0 0 0 80 50Z" fill="#f8b26a" transform="rotate(37.4928 50 50)">
+    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;45 50 50;0 50 50" keyTimes="0;0.5;1"></animateTransform>
+  </path>
+  <path d="M50 50L20 50A30 30 0 0 1 80 50Z" fill="#f8b26a" transform="rotate(-37.4928 50 50)">
+    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;-45 50 50;0 50 50" keyTimes="0;0.5;1"></animateTransform>
+  </path>
+</g><!-- [ldio] generated by https://loading.io/ --></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="pulse" data-name="pulse">
+<rect x="17.5" y="30" width="15" height="40" fill="#93dbe9">
+  <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
+  <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
+</rect>
+<rect x="42.5" y="30" width="15" height="40" fill="#689cc5">
+  <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
+  <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
+</rect>
+<rect x="67.5" y="30" width="15" height="40" fill="#5e6fa3">
+  <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+  <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+</rect> <!-- [ldio] generated by https://loading.io/ --></svg>
+			<style type="text/css">
+				#app-container{
+					position: relative;
+					min-height: 100vh;
+					min-width: 100vw;
+				}
+
+				#loader{
+					background-color: #fff;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100vw;
+					height: 100vh;
+					z-index: -1;
+					line-height: 100vh;
+					text-align: center;
+					opacity: 0;
+					transition: opacity 0.3s ease-out;
+					-webkit-transition: opacity 0.3s ease-out;
+				}
+
+				#loader svg{
+					display: none;
+				}
+
+				body.loading #app-container{
+					display: none;
+				}
+
+				body.loading #loader{
+					z-index: 999999;
+					opacity: 1;
+				}
+
+				body.loading #loader.pulse svg.pulse{
+					display: inline-block;
+				}
+
+				body.loading #loader.infinity svg.infinity{
+					display: inline-block;
+				}
+
+				body.loading #loader.bean-eater svg.bean-eater{
+					display: inline-block;
+				}
+			</style>
+		</div>
+	</body>
 </html>
